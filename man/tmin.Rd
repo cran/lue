@@ -3,12 +3,12 @@
 \docType{data}
 \name{tmin}
 \alias{tmin}
-\title{tmin data}
+\title{Minimum temperature data}
 \format{A raster (.nc)}
 \usage{
 tmin
 }
 \description{
-Input par dataset
+Input minimum temperature dataset
 }
 \keyword{datasets}

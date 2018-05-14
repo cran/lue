@@ -1,11 +1,12 @@
 Package: lue
 Type: Package
-Title: Light Use Efficiency Model to Estimate Biomass
-Version: 0.1.0
+Title: Light Use Efficiency Model to Estimate Biomass and YIELD with
+        and Without Vapour Pressure Deficit
+Version: 0.2.0
 Depends: R(>= 2.10.0)
-Author: Maninder Singh Dhillon, Thorsten Dahms, Christopher Conrad and Martin Wegmann
+Author: Maninder Singh Dhillon [aut,cre], Thorsten Dahms [ctb], Leon Nill [ctb]
 Maintainer: Maninder Singh Dhillon <manidhillon1989@gmail.com>
-Description: Contains LUE_BIOMASS() to estimate aboveground biomass firstly by calculating the Absorbed Photosynthetically Active Radiation (APAR) and secondly the actual values of light use efficiency Shi et al.(2007) <doi:10.2134/agronj2006.0260>.
+Description: Contains LUE_BIOMASS(),LUE_BIOMASS_VPD(), LUE_YIELD() and LUE_YIELD_VPD() to estimate aboveground biomass and crop yield firstly by calculating the Absorbed Photosynthetically Active Radiation (APAR) and secondly the actual values of light use efficiency with and without vapour presure deficit Shi et al.(2007) <doi:10.2134/agronj2006.0260>.
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
@@ -14,5 +15,5 @@ RoxygenNote: 6.0.1
 Repository: CRAN
 Suggests: rmarkdown
 NeedsCompilation: no
-Packaged: 2018-05-03 12:57:38 UTC; Praktikant
-Date/Publication: 2018-05-07 11:49:08 UTC
+Packaged: 2018-05-14 08:55:13 UTC; Praktikant
+Date/Publication: 2018-05-14 12:07:42 UTC
