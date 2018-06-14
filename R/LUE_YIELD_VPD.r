@@ -55,14 +55,13 @@ LUE_YIELD_VPD<-function(fpar_raster,par,tmin,tmax,tdew,tmin_min,tmin_max,vpd_max
   # including tmin with a mean value in a day and making it in degree celsius
   tmin_1<-mean(as.vector(tmin))-273.15
   # applying the criteria with diffrent thresholds of tmin for every crop
-
   if (tmin_1 <= tmin_min){
     tmin_1 <- 0
   }
-  else if (tmin_1 >= tmin_max){
+  if (tmin_1 >= tmin_max){
     tmin_1 <- 1
   }
-  else {
+  if(tmin_1 > tmin_min & tmin_1<tmin_max) {
     tmin_1<- (tmin_1 - tmin_min)* ((1/(tmin_max-tmin_min)))
   }
   # calculating VPD
@@ -78,9 +77,11 @@ LUE_YIELD_VPD<-function(fpar_raster,par,tmin,tmax,tdew,tmin_min,tmin_max,vpd_max
 
   if (VPD_day <= vpd_min){
     vpd_sv <- 1
-  } else if (VPD_day >= vpd_max){
+  }
+  if (VPD_day >= vpd_max){
     vpd_sv <- 0
-  } else {
+  }
+  if(VPD_day > vpd_min & VPD_day < vpd_max) {
     vpd_sv <- (VPD_day - vpd_min)* ((1/(vpd_max-vpd_min)))
   }
 

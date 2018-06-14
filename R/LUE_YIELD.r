@@ -48,10 +48,10 @@ LUE_YIELD<-function(fpar_raster,par,tmin,tmin_min,tmin_max,LUE_optimal) {
   if (tmin_1 <= tmin_min){
     tmin_1 <- 0
   }
-  else if (tmin_1 >= tmin_max){
+  if (tmin_1 >= tmin_max){
     tmin_1 <- 1
   }
-  else {
+  if(tmin_1 > tmin_min & tmin_1 < tmin_max) {
     tmin_1<- (tmin_1 - tmin_min)* ((1/(tmin_max-tmin_min)))
   }
   lue_act <- tmin_1 * LUE_optimal

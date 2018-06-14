@@ -2,7 +2,7 @@ Package: lue
 Type: Package
 Title: Light Use Efficiency Model to Estimate Biomass and YIELD with
         and Without Vapour Pressure Deficit
-Version: 0.2.0
+Version: 0.2.1
 Depends: R(>= 2.10.0)
 Author: Maninder Singh Dhillon [aut,cre], Thorsten Dahms [ctb], Leon Nill [ctb]
 Maintainer: Maninder Singh Dhillon <manidhillon1989@gmail.com>
@@ -13,7 +13,6 @@ LazyData: true
 Imports: raster,ncdf4
 RoxygenNote: 6.0.1
 Repository: CRAN
-Suggests: rmarkdown
 NeedsCompilation: no
-Packaged: 2018-05-14 08:55:13 UTC; Praktikant
-Date/Publication: 2018-05-14 12:07:42 UTC
+Packaged: 2018-06-14 12:29:08 UTC; s359182
+Date/Publication: 2018-06-14 12:39:16 UTC

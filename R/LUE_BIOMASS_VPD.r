@@ -61,10 +61,10 @@ LUE_BIOMASS_VPD<-function(fpar_raster,par,tmin,tmax,tdew,tmin_min,tmin_max,vpd_m
   if (tmin_1 <= tmin_min){
     tmin_1 <- 0
   }
-  else if (tmin_1 >= tmin_max){
+  if (tmin_1 >= tmin_max){
     tmin_1 <- 1
   }
-  else {
+  if(tmin_1 > tmin_min & tmin_1<tmin_max) {
     tmin_1<- (tmin_1 - tmin_min)* ((1/(tmin_max-tmin_min)))
   }
   # calculating VPD
@@ -78,9 +78,11 @@ LUE_BIOMASS_VPD<-function(fpar_raster,par,tmin,tmax,tdew,tmin_min,tmin_max,vpd_m
 
   if (VPD_day <= vpd_min){
     vpd_sv <- 1
-  } else if (VPD_day >= vpd_max){
+  }
+  if (VPD_day >= vpd_max){
     vpd_sv <- 0
-  } else {
+  }
+  if(VPD_day > vpd_min & VPD_day < vpd_max)  {
     vpd_sv <- (VPD_day - vpd_min)* ((1/(vpd_max-vpd_min)))
   }
 
